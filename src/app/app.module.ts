@@ -8,11 +8,13 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
+import { MainComponent } from './components/admin/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminNavComponent
+    AdminNavComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
