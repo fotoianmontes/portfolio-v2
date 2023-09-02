@@ -1,7 +1,15 @@
-nav {
+main {
+  background-color: white;
   position: fixed;
-  bottom: 50px;
-  left: calc(50% - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100vw;
+  height: 70px;
+}
+
+nav {
   width: 200px;
   display: inline-flex;
   padding: 1rem 0rem;
@@ -18,7 +26,7 @@ i {
 }
 
 i:hover {
-  transform: scale(125%);
+  transform: scale(150%);
 }
 
 @media screen and (min-width: 768px) {
