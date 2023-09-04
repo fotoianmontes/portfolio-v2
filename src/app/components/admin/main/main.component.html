@@ -24,18 +24,54 @@
     /></label>
 
     <label for="phone-number"
-      >Career:
+      >Phone number:
       <input id="phone-number" type="number" formControlName="phoneNumber"
     /></label>
 
     <section>
-      <article></article>
-      <label for="python"><i class="fa-brands fa-python"></i></label>
-
-      <input id="python" type="checkbox" formControlName="python" />
+      <article>
+        <input id="python" type="checkbox" formControlName="python" />
+        <label for="python"><i class="fa-brands fa-python"></i></label>
+      </article>
+      <article>
+        <input id="java" type="checkbox" formControlName="java" />
+        <label for="java"><i class="fa-brands fa-java"></i></label>
+      </article>
+      <article>
+        <input id="js" type="checkbox" formControlName="js" />
+        <label for="js"><i class="fa-brands fa-js"></i></label>
+      </article>
+      <article>
+        <input id="angular" type="checkbox" formControlName="angular" />
+        <label for="angular"><i class="fa-brands fa-angular"></i></label>
+      </article>
+      <article>
+        <input id="vuejs" type="checkbox" formControlName="vuejs" />
+        <label for="vuejs"><i class="fa-brands fa-vuejs"></i></label>
+      </article>
+      <article>
+        <input id="react" type="checkbox" formControlName="react" />
+        <label for="react"><i class="fa-brands fa-react"></i></label>
+      </article>
+      <article>
+        <input id="node-js" type="checkbox" formControlName="node-js" />
+        <label for="node-js"><i class="fa-brands fa-node-js"></i></label>
+      </article>
+      <article>
+        <input id="php" type="checkbox" formControlName="php" />
+        <label for="php"><i class="fa-brands fa-php"></i></label>
+      </article>
+      <article>
+        <input id="swift" type="checkbox" formControlName="swift" />
+        <label for="swift"><i class="fa-brands fa-swift"></i></label>
+      </article>
+      <article>
+        <input id="html5" type="checkbox" formControlName="html5" />
+        <label for="html5"><i class="fa-brands fa-html5"></i></label>
+      </article>
     </section>
     <label class="btn"
-      >Select file
+      >Select profile pic
       <input type="file" (change)="onUpload($event, 'profile.png')" />
     </label>
   </form>

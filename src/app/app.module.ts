@@ -10,9 +10,11 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
 import { MainComponent } from './components/admin/main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExperiencesComponent } from './components/admin/experiences/experiences.component';
+import { EducationComponent } from './components/admin/education/education.component';
 
 @NgModule({
-  declarations: [AppComponent, AdminNavComponent, MainComponent],
+  declarations: [AppComponent, AdminNavComponent, MainComponent, ExperiencesComponent, EducationComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
