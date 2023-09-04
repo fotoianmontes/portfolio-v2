@@ -50,12 +50,14 @@ input[type="file"] {
 
 .btn {
   background-color: var(--light-color);
-  display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: 700;
   color: white;
+  width: fit-content;
+  float: left;
+  margin-right: 1rem;
 }
 
 .btn:active {
@@ -66,7 +68,7 @@ input[type="file"] {
 }
 
 main {
-  margin-bottom: 80px;
+  margin-bottom: 125px;
 }
 
 section {
@@ -82,4 +84,24 @@ article {
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 40%;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: end;
 }

@@ -54,7 +54,7 @@
         <label for="react"><i class="fa-brands fa-react"></i></label>
       </article>
       <article>
-        <input id="node-js" type="checkbox" formControlName="node-js" />
+        <input id="node-js" type="checkbox" formControlName="nodejs" />
         <label for="node-js"><i class="fa-brands fa-node-js"></i></label>
       </article>
       <article>
@@ -71,8 +71,18 @@
       </article>
     </section>
     <label class="btn"
-      >Select profile pic
+      >Select image
       <input type="file" (change)="onUpload($event, 'profile.png')" />
     </label>
+    <div class="container">
+      <ng-container *ngFor="let image of profilePic">
+        <ng-container *ngIf="image.includes('profile')">
+          <div class="imgContainer">
+            <img [src]="image" alt="" />
+            <span class="btn" (click)="onDelete(image)">Delete</span>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
   </form>
 </main>

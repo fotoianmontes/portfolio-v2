@@ -9,7 +9,7 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class MainComponent {
   profileForm: FormGroup;
-
+  profilePic: string[];
   constructor(private storageService: StorageService) {
     this.profileForm = new FormGroup({
       firstName: new FormControl(''),
@@ -19,12 +19,32 @@ export class MainComponent {
       email: new FormControl(''),
       phoneNumber: new FormControl(''),
       python: new FormControl(''),
+      java: new FormControl(''),
+      js: new FormControl(''),
+      angular: new FormControl(''),
+      vuejs: new FormControl(''),
+      react: new FormControl(''),
+      nodejs: new FormControl(''),
+      php: new FormControl(''),
+      swift: new FormControl(''),
+      html5: new FormControl(''),
     });
+
+    this.profilePic = [];
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.storageService.getImages();
+    this.profilePic = this.storageService.images;
+  }
 
   onUpload($event: any, name: string) {
     this.storageService.uploadImage($event, name);
+    this.profilePic = this.storageService.images;
+  }
+
+  onDelete(image: string) {
+    this.storageService.deleteImage(image);
+    this.profilePic = this.storageService.images;
   }
 }

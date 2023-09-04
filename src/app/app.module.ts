@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -12,18 +13,31 @@ import { MainComponent } from './components/admin/main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExperiencesComponent } from './components/admin/experiences/experiences.component';
 import { EducationComponent } from './components/admin/education/education.component';
+import { HomeComponent } from './components/home/home.component';
+import { AdminHomeComponent } from './components/admin/admin-home/admin-home.component';
+import { appRoutingProviders, routing } from 'src/app.routing';
 
 @NgModule({
-  declarations: [AppComponent, AdminNavComponent, MainComponent, ExperiencesComponent, EducationComponent],
+  declarations: [
+    AppComponent,
+    AdminNavComponent,
+    MainComponent,
+    ExperiencesComponent,
+    EducationComponent,
+    HomeComponent,
+    AdminHomeComponent,
+  ],
   imports: [
     BrowserModule,
+    RouterModule,
+    routing,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
