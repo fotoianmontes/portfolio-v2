@@ -16,6 +16,7 @@ import { EducationComponent } from './components/admin/education/education.compo
 import { HomeComponent } from './components/home/home.component';
 import { AdminHomeComponent } from './components/admin/admin-home/admin-home.component';
 import { appRoutingProviders, routing } from 'src/app.routing';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { appRoutingProviders, routing } from 'src/app.routing';
     EducationComponent,
     HomeComponent,
     AdminHomeComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,

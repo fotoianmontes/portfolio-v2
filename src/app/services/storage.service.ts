@@ -20,7 +20,7 @@ export class StorageService {
   uploadImage($event: any, name: string) {
     const img = $event.target.files[0];
     const imgRef = ref(this.storage, `images/${name}`);
-    let imgPath: string = '';
+    let imgpath: string = '';
     this.images = [];
     uploadBytes(imgRef, img)
       .then((response) => this.getImages())

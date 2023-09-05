@@ -1,1 +1,45 @@
-<p>home works!</p>
+<main>
+  <img [src]="oldProfileInfo[0].imgpath" alt="" />
+  <section>
+    <div>
+      <span class="name line"
+        >{{ oldProfileInfo[0].firstName }}
+        {{ oldProfileInfo[0].lastName }}</span
+      >
+      <span class="career">{{ oldProfileInfo[0].career }}</span>
+    </div>
+
+    <span class="description">{{ oldProfileInfo[0].description }}</span>
+    <article>
+      <span *ngIf="oldProfileInfo[0].python"
+        ><i class="fa-brands fa-python"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].java"
+        ><i class="fa-brands fa-java"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].js"><i class="fa-brands fa-js"></i></span>
+      <span *ngIf="oldProfileInfo[0].angular"
+        ><i class="fa-brands fa-angular"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].vuejs"
+        ><i class="fa-brands fa-vuejs"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].react"
+        ><i class="fa-brands fa-react"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].nodejs"
+        ><i class="fa-brands fa-node-js"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].php"
+        ><i class="fa-brands fa-php"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].swift"
+        ><i class="fa-brands fa-swift"></i
+      ></span>
+      <span *ngIf="oldProfileInfo[0].html5"
+        ><i class="fa-brands fa-html5"></i
+      ></span>
+    </article>
+  </section>
+  <span class="btn">Resume</span>
+</main>

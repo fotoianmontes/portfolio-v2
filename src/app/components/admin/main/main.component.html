@@ -1,88 +1,173 @@
+<h2>Main page</h2>
 <main>
-  <h2>Main page</h2>
   <form [formGroup]="profileForm">
     <label for="first-name"
       >First Name:
-      <input id="first-name" type="text" formControlName="firstName"
+      <input
+        id="first-name"
+        type="text"
+        [value]="profileData.firstName"
+        formControlName="firstName"
     /></label>
 
     <label for="last-name"
-      >Last Name: <input id="last-name" type="text" formControlName="lastName"
+      >Last Name:
+      <input
+        id="last-name"
+        type="text"
+        [value]="profileData.lastName"
+        formControlName="lastName"
     /></label>
 
     <label for="career"
-      >Career: <input id="career" type="text" formControlName="career"
+      >Career:
+      <input
+        id="career"
+        type="text"
+        [value]="profileData.career"
+        formControlName="career"
     /></label>
 
     <label for="description"
       >Description:
-      <textarea id="description" formControlName="description"></textarea>
+      <textarea
+        id="description"
+        [value]="profileData.description"
+        formControlName="description"
+      ></textarea>
     </label>
 
     <label for="email"
-      >Email: <input id="email" type="email" formControlName="email"
+      >Email:
+      <input
+        id="email"
+        type="email"
+        [value]="profileData.email"
+        formControlName="email"
     /></label>
 
     <label for="phone-number"
       >Phone number:
-      <input id="phone-number" type="number" formControlName="phoneNumber"
+      <input
+        id="phone-number"
+        type="number"
+        [value]="profileData.phoneNumber"
+        formControlName="phoneNumber"
     /></label>
 
     <section>
       <article>
-        <input id="python" type="checkbox" formControlName="python" />
+        <input
+          id="python"
+          type="checkbox"
+          [checked]="profileData.python"
+          formControlName="python"
+        />
         <label for="python"><i class="fa-brands fa-python"></i></label>
       </article>
       <article>
-        <input id="java" type="checkbox" formControlName="java" />
+        <input
+          id="java"
+          type="checkbox"
+          [checked]="profileData.java"
+          formControlName="java"
+        />
         <label for="java"><i class="fa-brands fa-java"></i></label>
       </article>
       <article>
-        <input id="js" type="checkbox" formControlName="js" />
+        <input
+          id="js"
+          type="checkbox"
+          [checked]="profileData.js"
+          formControlName="js"
+        />
         <label for="js"><i class="fa-brands fa-js"></i></label>
       </article>
       <article>
-        <input id="angular" type="checkbox" formControlName="angular" />
+        <input
+          id="angular"
+          type="checkbox"
+          [checked]="profileData.angular"
+          formControlName="angular"
+        />
         <label for="angular"><i class="fa-brands fa-angular"></i></label>
       </article>
       <article>
-        <input id="vuejs" type="checkbox" formControlName="vuejs" />
+        <input
+          id="vuejs"
+          type="checkbox"
+          [checked]="profileData.vuejs"
+          formControlName="vuejs"
+        />
         <label for="vuejs"><i class="fa-brands fa-vuejs"></i></label>
       </article>
       <article>
-        <input id="react" type="checkbox" formControlName="react" />
+        <input
+          id="react"
+          type="checkbox"
+          [checked]="profileData.react"
+          formControlName="react"
+        />
         <label for="react"><i class="fa-brands fa-react"></i></label>
       </article>
       <article>
-        <input id="node-js" type="checkbox" formControlName="nodejs" />
+        <input
+          id="node-js"
+          type="checkbox"
+          [checked]="profileData.nodejs"
+          formControlName="nodejs"
+        />
         <label for="node-js"><i class="fa-brands fa-node-js"></i></label>
       </article>
       <article>
-        <input id="php" type="checkbox" formControlName="php" />
+        <input
+          id="php"
+          type="checkbox"
+          [checked]="profileData.php"
+          formControlName="php"
+        />
         <label for="php"><i class="fa-brands fa-php"></i></label>
       </article>
       <article>
-        <input id="swift" type="checkbox" formControlName="swift" />
+        <input
+          id="swift"
+          type="checkbox"
+          [checked]="profileData.swift"
+          formControlName="swift"
+        />
         <label for="swift"><i class="fa-brands fa-swift"></i></label>
       </article>
       <article>
-        <input id="html5" type="checkbox" formControlName="html5" />
+        <input
+          id="html5"
+          type="checkbox"
+          [checked]="profileData.html5"
+          formControlName="html5"
+        />
         <label for="html5"><i class="fa-brands fa-html5"></i></label>
       </article>
     </section>
-    <label class="btn"
-      >Select image
-      <input type="file" (change)="onUpload($event, 'profile.png')" />
-    </label>
-    <div class="container">
-      <ng-container *ngFor="let image of profilePic">
-        <ng-container *ngIf="image.includes('profile')">
-          <div class="imgContainer">
-            <img [src]="image" alt="" />
-            <span class="btn" (click)="onDelete(image)">Delete</span>
-          </div>
-        </ng-container>
-      </ng-container>
-    </div>
   </form>
+  <div class="container">
+    <div class="btnContainer">
+      <ng-container *ngIf="profileData.id == ''; else profileUpdate">
+        <span class="btn" (click)="onSubmit()">Send</span>
+      </ng-container>
+      <ng-template #profileUpdate>
+        <span class="btn" (click)="onUpdate(profileData)">Update</span>
+      </ng-template>
+      <label class="btn"
+        >Select image
+        <input type="file" (change)="onUpload($event, 'profile.png')" />
+      </label>
+    </div>
+    <ng-container *ngFor="let image of profilePic">
+      <ng-container *ngIf="image.includes('profile')">
+        <div class="imgContainer">
+          <img [src]="image" alt="" />
+          <span class="btn" (click)="onDelete(image)">Delete</span>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
 </main>
