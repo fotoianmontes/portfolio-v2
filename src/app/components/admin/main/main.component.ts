@@ -17,6 +17,7 @@ export class MainComponent {
     id: '',
     firstName: '',
     lastName: '',
+    logo: '',
     career: '',
     description: '',
     email: '',
@@ -41,6 +42,7 @@ export class MainComponent {
     this.profileForm = new FormGroup({
       firstName: new FormControl(''),
       lastName: new FormControl(''),
+      logo: new FormControl(''),
       career: new FormControl(''),
       description: new FormControl(''),
       email: new FormControl(''),
@@ -63,6 +65,7 @@ export class MainComponent {
           id: profile[0].id,
           firstName: profile[0].firstName,
           lastName: profile[0].lastName,
+          logo: profile[0].logo,
           career: profile[0].career,
           description: profile[0].description,
           email: profile[0].email,

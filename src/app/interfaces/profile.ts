@@ -1,5 +1,6 @@
 export interface Profile {
   id?: string;
+  logo: string;
   firstName: string;
   lastName: string;
   career: string;

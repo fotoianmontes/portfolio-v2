@@ -4,6 +4,8 @@
 
 :root {
   --light-color: #accddb;
+  --medium-color: #8acce9;
+  --dark-color: #60abcb;
 }
 
 * {

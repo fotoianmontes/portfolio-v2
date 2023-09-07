@@ -1,8 +1,125 @@
+<div class="header"></div>
 <main>
+  <!--<header>
+    <div>
+      <div class="logo">
+        <span>{{ profileData.firstName.charAt(0) }}</span>
+      </div>
+      <div>
+        <span class="title">{{ profileData.firstName }} &nbsp;</span>
+        <span class="title">{{ profileData.lastName }}</span>
+        <span class="subtitle">{{ [profileData.career] }}</span>
+      </div>
+    </div>
+    <div>
+      <img [src]="profileData.imgpath" alt="" />
+    </div>
+  </header>-->
   <header>
     <div class="logo">
-      <span>{{ profileData.firstName.charAt(0) }}</span>
+      <span>{{ profileData.logo }}</span>
     </div>
-    <span>{{ profileData.lastName }}</span>
+    <div>
+      <span class="title"
+        >{{ profileData.firstName }} {{ profileData.lastName }}</span
+      >
+      <span class="title">{{ profileData.lastName }}</span>
+      <span class="subtitle">{{ [profileData.career] }}</span>
+    </div>
   </header>
+  <div class="banner">
+    <div class="bar-container">
+      <div class="bar">
+        <p>Ganas de despertarme pronto:</p>
+        <div class="bar-stat">
+          <div [style.width]="barStat"></div>
+        </div>
+      </div>
+      <div class="bar">
+        <p>Ganas de despertarme pronto:</p>
+        <div class="bar-stat">
+          <div [style.width.%]="30"></div>
+        </div>
+      </div>
+      <div class="bar">
+        <p>Ganas de despertarme pronto:</p>
+        <div class="bar-stat">
+          <div [style.width.%]="75"></div>
+        </div>
+      </div>
+    </div>
+    <img src="{{ profileData.imgpath }}" alt="" />
+  </div>
+  <span class="title">Education</span>
+  <!--Hueco para la educacion-->
+  <section>
+    <article class="detail-box">
+      <div>
+        <img src="https://picsum.photos/201" alt="" />
+      </div>
+      <div>
+        <span>Lorem ipsum</span>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        <span>See more...</span>
+      </div>
+    </article>
+    <article class="detail-box">
+      <div>
+        <img src="https://picsum.photos/301" alt="" />
+      </div>
+      <div>
+        <span>Lorem ipsum</span>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        <span>See more...</span>
+      </div>
+    </article>
+    <article class="detail-box">
+      <div>
+        <img src="https://picsum.photos/302" alt="" />
+      </div>
+      <div>
+        <span>Lorem ipsum</span>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        <span>See more...</span>
+      </div>
+    </article>
+  </section>
+
+  <span class="title">Experience</span>
+  <!--Hueco para la experiencia-->
+  <section>
+    <article class="detail-box">
+      <div>
+        <img src="https://picsum.photos/302" alt="" />
+      </div>
+      <div>
+        <span>Your company name</span>
+        <span
+          >Want free ads on my webpage? Just hire me!
+          <i class="fa-regular fa-face-grin-tongue-squint"></i
+        ></span>
+        <span>See more...</span>
+      </div>
+    </article>
+    <article class="detail-box">
+      <div>
+        <img src="https://picsum.photos/200" alt="" />
+      </div>
+      <div>
+        <span>Lorem ipsum</span>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        <span>See more...</span>
+      </div>
+    </article>
+    <article class="detail-box">
+      <div>
+        <img src="https://picsum.photos/300" alt="" />
+      </div>
+      <div>
+        <span>Lorem ipsum</span>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        <span>See more...</span>
+      </div>
+    </article>
+  </section>
 </main>

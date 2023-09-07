@@ -9,6 +9,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class ResumeComponent {
   profileData!: Profile;
+  barStat: string = '15%';
   constructor(private firestore: FirestoreService) {}
 
   getProfile() {
