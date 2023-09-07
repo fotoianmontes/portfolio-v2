@@ -1,45 +1,34 @@
 <main>
-  <img [src]="oldProfileInfo[0].imgpath" alt="" />
-  <section>
-    <div>
-      <span class="name line"
-        >{{ oldProfileInfo[0].firstName }}
-        {{ oldProfileInfo[0].lastName }}</span
-      >
-      <span class="career">{{ oldProfileInfo[0].career }}</span>
-    </div>
-
-    <span class="description">{{ oldProfileInfo[0].description }}</span>
-    <article>
-      <span *ngIf="oldProfileInfo[0].python"
-        ><i class="fa-brands fa-python"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].java"
-        ><i class="fa-brands fa-java"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].js"><i class="fa-brands fa-js"></i></span>
-      <span *ngIf="oldProfileInfo[0].angular"
-        ><i class="fa-brands fa-angular"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].vuejs"
-        ><i class="fa-brands fa-vuejs"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].react"
-        ><i class="fa-brands fa-react"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].nodejs"
-        ><i class="fa-brands fa-node-js"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].php"
-        ><i class="fa-brands fa-php"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].swift"
-        ><i class="fa-brands fa-swift"></i
-      ></span>
-      <span *ngIf="oldProfileInfo[0].html5"
-        ><i class="fa-brands fa-html5"></i
-      ></span>
+  <section class="">
+    <article class="flex-row justify-center align-center">
+      <div class="data-web">
+        <span>Ian</span>
+        <span>Front-End</span>
+        <span>Developer</span>
+      </div>
+      <div class="flex-column align-center">
+        <span class="title web">&lt;<span>Hello</span>&gt; </span>
+        <span class="title web">&lt;/<span>World</span>&gt;</span>
+      </div>
+    </article>
+    <article id="left-container" class="flex-row justify-center">
+      <span>Front-end Developer</span>
     </article>
   </section>
-  <span class="btn">Resume</span>
+  <section class="">
+    <article class="flex-row justify-center align-center">
+      <div class="data-design">
+        <span>Montes</span>
+        <span>Graphic</span>
+        <span>Designer</span>
+      </div>
+      <div class="flex-column align-center">
+        <span class="title design">Light </span>
+        <span class="title design brush">is my brush</span>
+      </div>
+    </article>
+    <article id="right-container" class="flex-row justify-center align-center">
+      <span>Front-end Developer</span>
+    </article>
+  </section>
 </main>

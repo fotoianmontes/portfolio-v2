@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { ControllerService } from 'src/app/services/controller.service';
 
 @Component({
-  selector: 'app-resume',
-  templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.css'],
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class ResumeComponent {
-  barStat: string = '15%';
+export class HeaderComponent {
   constructor(public controller: ControllerService) {}
+
   ngOnInit() {
     this.controller.getProfile();
   }

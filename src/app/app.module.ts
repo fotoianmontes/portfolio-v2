@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AdminHomeComponent } from './components/admin/admin-home/admin-home.component';
 import { appRoutingProviders, routing } from 'src/app.routing';
 import { ResumeComponent } from './components/resume/resume.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ResumeComponent } from './components/resume/resume.component';
     HomeComponent,
     AdminHomeComponent,
     ResumeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

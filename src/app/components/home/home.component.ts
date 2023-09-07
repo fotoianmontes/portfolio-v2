@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
-import { FirestoreService } from 'src/app/services/firestore.service';
+import { ControllerService } from 'src/app/services/controller.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +9,9 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class HomeComponent {
   oldProfileInfo: Profile[] = [];
-  constructor(private firestoreService: FirestoreService) {}
+  constructor(private controller: ControllerService) {}
 
   ngOnInit() {
-    this.firestoreService.getProfile().subscribe((profile) => {
-      this.oldProfileInfo = profile;
-
-      console.log(this.oldProfileInfo[0]);
-    });
+    this.controller.getProfile();
   }
 }

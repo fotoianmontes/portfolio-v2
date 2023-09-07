@@ -17,14 +17,15 @@
   </header>-->
   <header>
     <div class="logo">
-      <span>{{ profileData.logo }}</span>
+      <span>{{ controller.profileData.logo }}</span>
     </div>
     <div>
       <span class="title"
-        >{{ profileData.firstName }} {{ profileData.lastName }}</span
+        >{{ controller.profileData.firstName }}
+        {{ controller.profileData.lastName }}</span
       >
-      <span class="title">{{ profileData.lastName }}</span>
-      <span class="subtitle">{{ [profileData.career] }}</span>
+      <span class="title">{{ controller.profileData.lastName }}</span>
+      <span class="subtitle">{{ [controller.profileData.career] }}</span>
     </div>
   </header>
   <div class="banner">
@@ -48,7 +49,7 @@
         </div>
       </div>
     </div>
-    <img src="{{ profileData.imgpath }}" alt="" />
+    <img src="{{ controller.profileData.imgpath }}" alt="" />
   </div>
   <span class="title">Education</span>
   <!--Hueco para la educacion-->

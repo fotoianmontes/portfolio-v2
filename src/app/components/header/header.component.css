@@ -1,0 +1,99 @@
+.header {
+  width: 100%;
+  height: 5px;
+  background-color: var(--light-color);
+}
+
+header {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > div:nth-child(2) > :first-child {
+  display: none;
+}
+
+.logo {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.logo span {
+  font-family: "Permanent Marker";
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transform: translateY(46%);
+  font-weight: 900;
+  color: white;
+}
+
+.logo::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-color);
+}
+
+.logo::after {
+  position: absolute;
+  transform: translateX(100%);
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: var(--medium-color);
+  box-shadow: -1px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  color: var(--light-color);
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  header > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  header > div:nth-child(2) > :first-child {
+    display: none;
+  }
+
+  header > div:nth-child(2) > :first-child {
+    display: block;
+  }
+
+  header > div:nth-child(2) > :nth-child(2) {
+    display: none;
+  }
+}
