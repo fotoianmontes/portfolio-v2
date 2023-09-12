@@ -109,7 +109,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: end;
+  align-items: flex-end;
 }
 
 @media screen and (min-width: 768px) {

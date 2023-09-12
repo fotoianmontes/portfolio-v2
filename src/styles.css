@@ -4,10 +4,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;500&display=swap");
+
 :root {
   --light-color: #accddb;
   --medium-color: #8acce9;
   --dark-color: #60abcb;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
 }
 
 * {
